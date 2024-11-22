@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Barlow", sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body.index{
+    background-color: gray;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    img.mesa{
+        position: relative;
+        z-index: 1;
+        bottom: 0;
+        left: 34px;
+        max-height: 500px;
+    }
+    img.creatina {
+        position: absolute;
+        z-index: 2;
+        bottom: 130px;
+        max-width: 70%;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+    }
+    img.lucas{
+        position: absolute;
+        max-width: 40%;
+        transition: 1s ease-out;
+    }
+    img.lucas.topo{
+        transform: translateY(-320px);
+    }
+}
+
+/* CARTA */
+
+.slider{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .sliderimgs{
+        width: 100%;
+        height: 90vh;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div.img-back{
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2%;
+            img.imagemSlider{
+                width: 100%;
+                max-height: 100%;
+                opacity: 0;
+                transition: 0.6s;
+            }
+            img.show{
+                opacity: 100!important;
+            }
+        }
+    }
+    h2{
+        font-weight: normal;
+    }
+}
+
+#carta{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    position: relative;
+    p{
+        text-align: center;
+    }
+    div.btn{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        rotate: -90deg;
+        background-color: purple;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        i{
+            font-size: 20px;
+        }
+    }
+    div.btn.showBtn{
+        display: flex;
+    }
+    div.btn.back{
+        left: 10px!important;
+        rotate: 180deg;
+    }
+}

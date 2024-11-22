@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Lucas</title>
+</head>
+<body class="index">
+
+    <main class="main">
+
+        <img class="mesa" src="./mesa.png" alt="mesa">
+        <img class="creatina" src="./creatina.png" alt="creatina" id="creatina">
+        <img src="./lucas.png" alt="lucas" class="lucas" id="lucas">
+
+    </main>
+    
+     <script>
+        const creatina = document.getElementById("creatina")
+        const lucas = document.getElementById("lucas")
+        creatina.addEventListener("click", ()=>{
+            lucas.classList.add("topo")
+            setTimeout(() => {
+                window.location = "carta.html"
+            }, 3000);
+        })
+     </script>
+</body>
+</html>
