@@ -27,26 +27,48 @@ body.index{
     position: relative;
     img.mesa{
         position: relative;
-        z-index: 1;
+        z-index: 2;
         bottom: 0;
         left: 34px;
         max-height: 500px;
     }
-    img.creatina {
+    img.pote {
         position: absolute;
-        z-index: 2;
-        bottom: 130px;
-        max-width: 70%;
+        z-index: 3;
+        bottom: 140px;
+        max-width: 60%;
         -webkit-filter: drop-shadow(5px 5px 5px #222);
         filter: drop-shadow(5px 5px 5px #222);
     }
+    img.tampa{
+        position: absolute;
+        z-index: 3;
+        bottom: 310px;
+        left: 51px;
+        max-width: 75%;
+        transition: 0.4s ease-out;
+    }
+    img.tampa.explodir{
+        transform: translateY(-350px);
+    }
     img.lucas{
         position: absolute;
+        z-index: 2;
         max-width: 40%;
-        transition: 1s ease-out;
+        transition: 0.8s ease-out;
     }
     img.lucas.topo{
-        transform: translateY(-320px);
+        transform: translateY(-365px);
+    }
+    img.explosao{
+        position: absolute;
+        width: 500px;
+        z-index: 1;
+        bottom: 330px;
+        display: none;
+    }
+    img.explosao.explodir{
+        display: block;
     }
 }
 
@@ -84,9 +106,6 @@ body.index{
             }
         }
     }
-    h2{
-        font-weight: normal;
-    }
 }
 
 #carta{
@@ -122,5 +141,9 @@ body.index{
     div.btn.back{
         left: 10px!important;
         rotate: 180deg;
+    }
+    h2{
+        font-weight: normal;
+        padding: 10px 0;
     }
 }

@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Lucas</title>
 </head>
 <body class="index">
 
     <main class="main">
 
-        <img class="mesa" src="./mesa.png" alt="mesa">
-        <img class="creatina" src="./creatina.png" alt="creatina" id="creatina">
-        <img src="./lucas.png" alt="lucas" class="lucas" id="lucas">
+        <img class="pote" src="./img/pote.png" alt="pote" id="pote">
+        <img src="./img/tampa.png" alt="tampa" class="tampa" id="tampa">
+        <img src="./img/explosion.gif" alt="explosão" class="explosao" id="explosao">
+        <img src="./img/lucas.png" alt="lucas" class="lucas" id="lucas">
+        <img class="mesa" src="./img/mesa.png" alt="mesa">
 
     </main>
     
      <script>
-        const creatina = document.getElementById("creatina")
+        const creatina = document.getElementById("pote")
+        const tampa = document.getElementById("tampa")
+        const explosao = document.getElementById("explosao")
         const lucas = document.getElementById("lucas")
+        const audio = new Audio('./sounds/explosion.mp3')
         creatina.addEventListener("click", ()=>{
             lucas.classList.add("topo")
+            tampa.classList.add("explodir")
+            setTimeout(() => {
+                explosao.classList.add("explodir")
+                audio.play();
+            }, 550);
+            setTimeout(() => {
+                explosao.classList.remove("explodir")
+            }, 3000);
             setTimeout(() => {
                 window.location = "carta.html"
             }, 3000);
+
         })
      </script>
 </body>
