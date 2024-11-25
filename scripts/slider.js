@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.imagemSlider');
-    const audio = new Audio('./sounds/tomara.mp3')
+    const audio = new Audio('https://music.youtube.com/watch?v=xAGGTEwExv4&si=R1MxCxPRUWaoCaKO')
     let currentSlide = 0;
 
     function nextSlide() {
